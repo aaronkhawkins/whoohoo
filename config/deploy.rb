@@ -8,7 +8,7 @@ set :user, "ahawkins"
 # set :application, "set your application name here"
 # set :repository,  "set your repository location here"
 
-set :application, "whoohoo"
+set :application, "test.aaronkhawkins.com"
 set :repository,  "git@github.com:aaronkhawkins/whoohoo.git"
 set :scm, :git
 set :branch, 'master'

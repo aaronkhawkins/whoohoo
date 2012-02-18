@@ -1,5 +1,7 @@
 require 'bundler/capistrano'
 
+set :default_environment, { 'PATH' => "'/usr/lib/ruby/gems/1.8/bin//bundle:/home/ahawkins/.gems/bin:/usr/lib/ruby/gems/1.8/bin/:/usr/local/bin:/usr/bin:/bin:/usr/bin/X11:/usr/games'"}
+
 default_run_options[:pty] = false
 ssh_options[:forward_agent] = true
 set :use_sudo, false
@@ -16,7 +18,7 @@ set :git_shallow_clone, 1
 set :deploy_via, :remote_cache
 set :copy_compression, :bz2
 set :rails_env, 'production'
-set :deploy_to, "/home/ahawkins/#{application}"
+set :deploy_to, "/home/ahawkins/test.aaronkhawkins.com/apps/#{application}"
 
 # set :scm, :subversion
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`

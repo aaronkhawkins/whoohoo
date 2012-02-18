@@ -1,6 +1,6 @@
 require 'bundler/capistrano'
 
-set :default_environment, { 'PATH' => "'/usr/lib/ruby/gems/1.8/bin//bundle:/home/ahawkins/.gems/bin:/usr/lib/ruby/gems/1.8/bin/:/usr/local/bin:/usr/bin:/bin:/usr/bin/X11:/usr/games'"}
+set :default_environment, { 'PATH' => "'/home/ahawkins/test.aaronkhawkins.com/apps/test.aaronkhawkins.com/shared/bundle:/usr/lib/ruby/gems/1.8/bin/bundle:/home/ahawkins/.gems/bin:/usr/lib/ruby/gems/1.8/bin/:/usr/local/bin:/usr/bin:/bin:/usr/bin/X11:/usr/games'"}
 
 default_run_options[:pty] = false
 ssh_options[:forward_agent] = true

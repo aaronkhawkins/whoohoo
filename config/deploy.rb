@@ -39,6 +39,14 @@ namespace :deploy do
   end
 end
 
+after 'deploy:update_code', 'deploy:symlink_db'
+
+namespace :deploy do desc "Symlinks the database.yml"
+  task :symlink_db, :roles => :application do
+    run "ln -nfs #/shared/config/database.yml #/config/database.yml"
+  end
+end
+
 # If you are using Passenger mod_rails uncomment this:
 # namespace :deploy do
 #   task :start do ; end

@@ -1,4 +1,4 @@
-requre 'bundler/capistrano'
+require 'bundler/capistrano'
 
 default_run_options[:pty] = false
 ssh_options[:forward_agent] = true
